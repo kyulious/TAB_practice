@@ -1,0 +1,85 @@
+@charset 'UTF-8';
+* {
+    margin: 0px;
+    padding: 0px;
+}
+ul, ol, li{
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    outline: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(imgs/back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.gallery{
+    width: 800px;
+    height: 400px;
+    border: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -200px;
+}
+
+.gallery .tab{
+    width: 200px;
+    height: 100%;
+    background: greenyellow;
+    position: relative;
+    opacity: 10;
+}
+.gallery .tab .btns{
+    width: 100%;
+    height: 100%;
+    background: pink;
+    position: relative;
+}
+.gallery .tab .btns li.on a {
+    background: palevioletred;
+    color: white;
+}
+
+ .gallery .boxs > div{
+    width: 600px;
+    height: 400px;
+    background: rgba(0,0,0,0.5);
+    font: bold 40px/1 "arial";
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    opacity:0;
+    z-index: 1;
+    transition: opacity 1s;
+}
+
+.gallery .boxs > div.on{
+    opacity: 1;
+    z-index: 2;
+}
+.gallery .boxs > div#tab1{
+    display: block;
+    height: 400px;
+}
+.gallery .boxs > div#tab2{
+    height: 350px;
+}
+.gallery .boxs > div#tab3{
+    height: 380px;
+}
+.gallery .boxs > div#tab4{
+    height: 300px;
+}
+.gallery .boxs > div span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+}
